@@ -14,9 +14,11 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 	{
 		return;
 	}
+	else
+	{
 
 		func(tree->n);
 		binary_tree_pre_order(tree->left, func);
 		binary_tree_pre_order(tree->right, func);
-
+	}
 }
